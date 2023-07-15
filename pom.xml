@@ -3833,7 +3833,7 @@ limitations under the License.
     <module>connector</module>
     <module>client</module>
     <module>provision</module>
-    <module>contrib</module>
+    <!-- <module>contrib</module> -->
     <module>dac</module>
     <module>distribution</module>
     <module>sabot</module>

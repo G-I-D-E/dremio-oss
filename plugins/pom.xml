@@ -35,13 +35,13 @@
   <modules>
     <module>elasticsearch</module>
     <module>hdfs</module>
-    <module>hive-function-registry</module>
+    <!-- <module>hive-function-registry</module> -->
     <module>pdfs</module>
     <module>mongo</module>
     <module>nas</module>
-    <module>hive-common</module>
+    <!-- <module>hive-common</module>
     <module>hive</module>
-    <module>hive2</module>
+    <module>hive2</module> -->
     <module>common</module>
     <module>sysflight</module>
   </modules>
@@ -59,7 +59,7 @@
         <module>awsauth</module>
         <module>azure</module>
         <module>s3</module>
-        <module>hive3</module>
+        <!-- <module>hive3</module> -->
         <module>awsglue</module>
         <module>gcs</module>
       </modules>

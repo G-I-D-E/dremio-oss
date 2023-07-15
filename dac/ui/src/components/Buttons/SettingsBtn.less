@@ -17,6 +17,7 @@
 @import "../colors.less";
 
 :global {
+
   // DX-11429 TODO reafactor component to use css modules instead fo global classes
   .convert-to-dataset {
     a {
@@ -25,21 +26,26 @@
       }
     }
   }
+
   .action-wrap {
     display: flex;
     align-items: center;
   }
+
   .main-settings-btn {
     display: flex;
     position: relative;
+
     &.min-btn {
       .settings-button {
         padding: 0 3px;
       }
+
       .drop-down {
         left: -115px;
       }
     }
+
     .settings-button {
       padding: 3px 3px 4px 8px;
       margin: 0;
@@ -48,18 +54,22 @@
       border-radius: 4px;
       background: @button-bg;
       height: 23px;
+
       &:hover {
         background: @button-hover-bg;
       }
+
       .fa {
         margin: 0;
       }
+
       .settings-icon {
         height: 24px;
         width: 24px;
         color: var(--dremio--color--neutral--600);
       }
     }
+
     .drop-down {
       text-align: left;
       position: absolute;
@@ -74,6 +84,7 @@
       border-radius: 4px;
       width: 155px;
       z-index: 2;
+
       li {
         color: @black;
         font-size: 12px;
@@ -81,19 +92,24 @@
         padding: 2px 7px;
         cursor: pointer;
         position: relative;
+
         &:hover {
           background: @OVERLAY_BORDER;
-          > .drop-down {
+
+          >.drop-down {
             display: block !important;
           }
         }
+
         &.separator {
           border-bottom: 1px solid #d7d7d7;
           padding-bottom: 5px;
           margin-bottom: 5px;
         }
+
         &.has-child {
           padding-right: 15px !important;
+
           &::after {
             content: "►";
             position: absolute;
@@ -106,10 +122,12 @@
           }
         }
       }
+
       .help-text {
         font-size: 11px;
       }
     }
+
     .min-arrow {
       color: #aaa;
       font-size: 11px;

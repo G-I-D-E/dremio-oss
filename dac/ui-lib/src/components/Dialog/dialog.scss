@@ -20,7 +20,9 @@
   &__backdrop {
     background-color: $dialog_backdrop !important;
   }
+
   overflow-x: auto;
+
   &__container {
     &.--centered {
       top: unset;
@@ -28,6 +30,7 @@
       height: 100%;
     }
   }
+
   &__paper {
     border-radius: 4px !important;
     width: 600px;

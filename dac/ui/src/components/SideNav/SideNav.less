@@ -25,6 +25,7 @@ html {
     display: flex;
     flex-direction: column;
     width: 6.4rem;
+    border-right: 1px solid @DAIR_DIVIDER;
 
     a:hover,
     .link:hover,
@@ -53,12 +54,12 @@ html {
       }
 
       &.--active {
-        background-color: var(--dremio--color--primary--600);
+        background-color: var(--dremio--color--primary--500);
       }
     }
 
     .sideNav-item__icon {
-      color: var(--dremio--color--neutral--000);
+      color: var(--dair--ICON);
 
       dremio-icon {
         width: 24px;
@@ -88,11 +89,11 @@ html {
       }
 
       &.--active {
-        background-color: var(--dremio--color--primary--600);
+        background-color: var(--dremio--color--primary--200);
         color: @sideBar-icon-image-color-active !important;
 
         &:hover {
-          background-color: var(--dremio--color--primary--600);
+          background-color: var(--dremio--color--primary--500);
         }
       }
 
@@ -165,12 +166,13 @@ html {
 // sonar is default theme, above
 :global {
   .sideNav {
+
     // organization theme
     &--organization {
       background-color: var(--dremio--color--primary--100);
 
       .sideNav-item__icon {
-        color: var(--dremio--color--neutral--600);
+        color: var(--dair--ICON);
       }
 
       .sideNav-item__caret-icon {

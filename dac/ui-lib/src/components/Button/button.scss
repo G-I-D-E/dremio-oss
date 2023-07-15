@@ -38,6 +38,7 @@
     &.--contained {
       background-color: $FIGMA_PRIMARY_500;
       color: $white;
+
       &:hover {
         border: none;
         background-color: $FIGMA_PRIMARY_600;
@@ -50,8 +51,7 @@
       color: $dark-gray;
 
       img {
-        filter: invert(34%) sepia(21%) saturate(290%) hue-rotate(173deg)
-          brightness(88%) contrast(87%) !important;
+        filter: invert(34%) sepia(21%) saturate(290%) hue-rotate(173deg) brightness(88%) contrast(87%) !important;
       }
 
       &:hover {
@@ -68,6 +68,7 @@
       border: none;
       color: $primary-color;
       min-width: auto;
+
       &:hover {
         background-color: $lighter-neutral-color;
       }
@@ -81,8 +82,7 @@
       pointer-events: none;
 
       img {
-        filter: invert(34%) sepia(21%) saturate(290%) hue-rotate(173deg)
-          brightness(88%) contrast(87%) !important;
+        filter: invert(34%) sepia(21%) saturate(290%) hue-rotate(173deg) brightness(88%) contrast(87%) !important;
       }
     }
   }
@@ -94,6 +94,7 @@
 
     &.--contained {
       background-color: $white;
+
       &:hover {
         background-color: $cultured;
       }
@@ -119,6 +120,7 @@
     border: 1px solid $bridesmaid;
 
     color: $sunglo;
+
     &.--contained,
     &.--text {
       background-color: $bridesmaid;
@@ -155,6 +157,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

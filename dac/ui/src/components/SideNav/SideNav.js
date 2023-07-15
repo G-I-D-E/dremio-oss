@@ -216,11 +216,11 @@ const SideNav = (props) => {
           renderDisabled={() => <SideNavAdmin user={user} />}
           renderPending={() => <SideNavAdmin user={user} />}
         />
-        <SideNavHoverMenu
+        {/* <SideNavHoverMenu
           tooltipStringId={"SideNav.Help"}
           menu={<HelpMenu />}
           icon={"interface/help"}
-        />
+        /> */}
         <SideNavHoverMenu
           aria-label="User options"
           tooltipString={userTooltip}

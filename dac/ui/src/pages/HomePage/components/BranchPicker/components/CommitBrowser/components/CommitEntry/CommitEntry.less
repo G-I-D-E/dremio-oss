@@ -22,17 +22,21 @@
       table-layout: fixed;
       width: 284px;
     }
-    tr > td:first-of-type {
+
+    tr>td:first-of-type {
       vertical-align: top;
     }
+
     td:first-of-type {
       width: 30%;
     }
+
     td {
       vertical-align: top;
     }
+
     a {
-      color: lighten(#008489, 8%);
+      color: lighten(#3203C5, 8%);
     }
   }
 
@@ -46,12 +50,14 @@
     transition: background-color 0.25s linear;
 
     &:not(.disabled) {
+
       &:hover,
       &:focus {
         background-color: @aqua-spring;
       }
+
       &.isSelected {
-        background-color: @PRIMARY_200;
+        background-color: @PRIMARY_300;
       }
     }
 
@@ -76,6 +82,7 @@
 
     &.disabled {
       cursor: not-allowed;
+
       a {
         pointer-events: none;
       }
@@ -92,7 +99,7 @@
       font-size: 14px;
       font-weight: normal;
 
-      & > * {
+      &>* {
         width: 33.3%;
         margin-right: 4px;
       }

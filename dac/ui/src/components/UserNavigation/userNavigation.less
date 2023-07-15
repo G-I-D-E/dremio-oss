@@ -55,7 +55,7 @@
       font-size: 12px;
       padding-bottom: 4px;
       font-weight: 400;
-      color: var(--dremio--color--neutral--600);
+      color: var(--dremio--color--neutral--500);
     }
 
     &__item,
@@ -73,9 +73,7 @@
       height: 40px;
 
       &.--selected {
-        background-color: var(
-          --dremio--color--primary--600
-        ) !important; // Important is needed here to ignore the :hover's background
+        background-color: var(--dremio--color--primary--500) !important; // Important is needed here to ignore the :hover's background
         color: var(--dremio--color--neutral--000);
         margin: 0 2x 0 4px;
         font-weight: 600;
@@ -85,6 +83,7 @@
     &__header {
       margin: 0 16px;
       padding-left: 0px;
+
       &:hover {
         background-color: inherit;
       }
@@ -92,6 +91,7 @@
 
     &__headerLink {
       margin: 2px 16px 2px 4px;
+
       &:hover {
         background-color: var(--dremio--color--primary--150);
       }
@@ -99,6 +99,7 @@
 
     &__navigation {
       margin: 0 16px;
+
       span {
         color: var(--dremio--color--primary--800);
       }
@@ -126,6 +127,7 @@
       color: var(--dremio--color--neutral--600);
     }
   }
+
   #selected {
     filter: brightness(0) invert(1);
   }

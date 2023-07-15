@@ -105,7 +105,7 @@ export class SignupForm extends PureComponent {
                 />
               )}
             </div>
-            <div style={styles.footerLink}>
+            {/* <div style={styles.footerLink}>
               <a
                 href="https://www.dremio.com/legal/privacy-policy"
                 target="_blank"
@@ -113,7 +113,7 @@ export class SignupForm extends PureComponent {
               >
                 {la("Privacy")}
               </a>
-            </div>
+            </div> */}
           </div>
         </InnerComplexForm>
       </div>

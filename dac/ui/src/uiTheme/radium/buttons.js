@@ -39,8 +39,8 @@ export const button = {
 export const primary = {
   ...button,
   color: "#fff",
-  backgroundColor: BLUE,
-  borderColor: BLUE,
+  backgroundColor: 'var(--dair--BRAND)',
+  borderColor: 'var(--dair--BRAND)',
 };
 
 export const danger = {
@@ -59,9 +59,9 @@ export const warn = {
 
 export const outlined = {
   ...button,
-  color: BLUE,
+  color: 'var(--dair--BRAND)',
   backgroundColor: "inherit",
-  borderColor: BLUE,
+  borderColor: 'var(--dair--BRAND)',
 };
 
 export const disabled = {
@@ -75,7 +75,7 @@ export const disabled = {
 
 export const submitting = {
   primary: {
-    backgroundColor: "#68C6D3",
+    backgroundColor: 'var(--dair--BRAND)',
     cursor: "default",
   },
   secondary: {

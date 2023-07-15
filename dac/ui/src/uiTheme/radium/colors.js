@@ -38,34 +38,34 @@ export const BORDER_ACTIVE_DRAG_AREA = "#92E2D0";
 export const SECONDARY = "rgba(0,0,0,0.04)";
 export const SECONDARY_BORDER = "rgba(0,0,0,0.05)";
 export const SHADOW = "rgba(129,209,235,0.20)";
-export const DIVIDER = "#E4E4E4";
+export const DIVIDER = "#E6E8F0";
 
 export const HISTORY_ITEM_COLOR = "#DDDDDD";
 
 // todo maybe will change
-export const EXPLORE_HEADER_BUTTON_COLOR = "#dbe8ed";
-export const EXPLORE_SQL_BUTTON_COLOR = "#E5F2F7";
-export const EXPLORE_BORDER_COLOR = "#e8eff2";
-export const EXPLORE_HOVER_COLOR = "#E6E6E6";
+export const EXPLORE_HEADER_BUTTON_COLOR = "#9FA6B0";
+export const EXPLORE_SQL_BUTTON_COLOR = "#9FA6B0";
+export const EXPLORE_BORDER_COLOR = "#9FA6B0";
+export const EXPLORE_HOVER_COLOR = "#3203C5";
 export const CELL_EXPANSION_HEADER = "#F3F3F3";
 export const CELL_EXPANSION = "#E9E9E9";
 
 // menu
-export const MENU_SELECTED = "#d2edf2";
+export const MENU_SELECTED = "#F4F2FC";
 
-export const MALIBU = "#63DAFF";
+export const MALIBU = "#3203C5";
 
-export const PRIMARY_500 = "#43B8C9";
-export const PRIMARY_600 = "#2E92A1";
-export const PRIMARY_700 = "#206771";
+export const PRIMARY_500 = "#3203C5";
+export const PRIMARY_600 = "#220286";
+export const PRIMARY_700 = "#220286";
 
 export const NETURAL_150 = "#EEEFF1";
 export const NETURAL_200 = "#D2D6DA";
 export const NETURAL_300 = "#B0B7BF";
 
-export const TEXT_MAIN = "#202124";
-export const TEXT_DISABLED = "#B0B7BF";
-export const LESS_IMPORTANT_TEXT = "#505862";
+export const TEXT_MAIN = "#1C1C1C";
+export const TEXT_DISABLED = "#8A8A8A";
+export const LESS_IMPORTANT_TEXT = "#585757";
 
 export const RIBBON = "#F6F7F8";
 

@@ -15,6 +15,7 @@
  */
 
 @import "~@app/uiTheme/less/color-schema.less";
+
 :global {
   // DX-11429 TODO reafactor component to use css modules instead fo global classes
 
@@ -36,6 +37,7 @@
       cursor: pointer;
 
       &:not(.--selected) {
+
         &:hover,
         &:focus {
           color: var(--dremio--color--link);
@@ -43,7 +45,7 @@
       }
 
       &.--selected {
-        background-color: @PRIMARY_200;
+        background-color: @PRIMARY_300;
         border-radius: 0.4rem;
       }
     }

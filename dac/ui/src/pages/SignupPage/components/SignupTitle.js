@@ -20,20 +20,20 @@ import { FLEX_NOWRAP_ROW_BETWEEN_CENTER } from "uiTheme/radium/flexStyle";
 
 import { formDescription } from "uiTheme/radium/typography";
 
-const OVERLAY_COLOR = "#3acbac";
+const OVERLAY_COLOR = "#3203C5";
 const OVERLAY_POINTER_SIZE = 10;
 
 class SignupTitle extends PureComponent {
   render() {
     return (
       <div id="signup-title" style={styles.base}>
-        <h1 style={styles.mainTitle}>{la("Welcome to Dremio")}</h1>
+        <h1 style={styles.mainTitle}>{la("Welcome to dair-Connect")}</h1>
         <div style={styles.subtitleWrap}>
-          <FontIcon
+          {/* <FontIcon
             type="NarwhalLogo"
             theme={styles.theme}
             iconClass={"dremioLogo"}
-          />
+          /> */}
           <h3 style={styles.subtitle}>
             {la("We are excited to have you on board!")}
             <br />
