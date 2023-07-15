@@ -20,6 +20,8 @@ LABEL maintainer=Dremio
 
 ARG DOWNLOAD_URL
 
+COPY ../server/target/dremio-community-*.tar.gz /tmp/dremio.tar.gz
+
 RUN \
   apt-get update \
   && apt-get install wget -y \
@@ -37,8 +39,7 @@ RUN \
   && chown -R dremio:dremio /var/run/dremio \
   && chown -R dremio:dremio /var/log/dremio \
   && chown -R dremio:dremio /var/lib/dremio \
-  && wget -q "${DOWNLOAD_URL}" -O dremio.tar.gz \
-  && tar vxfz dremio.tar.gz -C /opt/dremio --strip-components=1 \
+  && tar vxfz /tmp/dremio.tar.gz -C /opt/dremio --strip-components=1 \
   && rm -rf dremio.tar.gz
 
 EXPOSE 9047/tcp
