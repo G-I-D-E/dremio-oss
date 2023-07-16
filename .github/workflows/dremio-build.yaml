@@ -42,10 +42,15 @@ jobs:
           8
           11
 
+    - name: list dir
+      run: |
+        ls -alrt ${HOME}
+        ls -alrt ~/.m2/
+
     - name: Configure Maven Toolchains
       run: |
-        mkdir -p "${HOME}/.m2"
-        cat <<EOF > "${HOME}/.m2/toolchains.xml"
+        mkdir -p "~/.m2/"
+        cat <<EOF > "~/.m2/toolchains.xml"
         <?xml version="1.0" encoding="UTF8"?>
         <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
