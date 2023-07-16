@@ -41,13 +41,43 @@ jobs:
         java-version: |
           8
           11
-        
-#     - name: Build dair base
+
+    - name: Configure Maven Toolchains
+      run: |
+        mkdir -p "${HOME}/.m2"
+        cat <<EOF > "${HOME}/.m2/toolchains.xml"
+        <?xml version="1.0" encoding="UTF8"?>
+        <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+            <toolchain>
+                <type>jdk</type>
+                <provides>
+                    <version>11</version>
+                </provides>
+                <configuration>
+                    <jdkHome>${env.JAVA_HOME_11_X64}</jdkHome>
+                </configuration>
+            </toolchain>
+            <toolchain>
+                <type>jdk</type>
+                <provides>
+                    <version>1.8</version>
+                </provides>
+                <configuration>
+                    <jdkHome>${env.JAVA_HOME_8_X64}</jdkHome>
+                </configuration>
+            </toolchain>
+        </toolchains>
+        EOF
+        echo "Maven Toolchains configured"
+
+#     - name: Build dremio base
 #       #working-directory: dair-base
 #       run: mvn clean install -DskipTests=true
 
     - name: list dir
-      run: ls -alrt && printenv | grep JAVA_HOME
+      run: ls -alrt ${HOME}/.m2/ && printenv | grep JAVA_HOME
       
 #     - name: Configure AWS credentials
 #       uses: aws-actions/configure-aws-credentials@v1
