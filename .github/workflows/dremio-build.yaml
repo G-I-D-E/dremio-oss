@@ -48,60 +48,26 @@ jobs:
         ls -alrt ~/.m2/
         cat ~/.m2/toolchains.xml
 
-    - name: Configure Maven Toolchains
-      run: |
-        mkdir -p "~/.m2/"
-        cat <<EOF > "~/.m2/toolchains.xml"
-        <?xml version="1.0" encoding="UTF8"?>
-        <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
-            <toolchain>
-                <type>jdk</type>
-                <provides>
-                    <version>11</version>
-                </provides>
-                <configuration>
-                    <jdkHome>${env.JAVA_HOME_11_X64}</jdkHome>
-                </configuration>
-            </toolchain>
-            <toolchain>
-                <type>jdk</type>
-                <provides>
-                    <version>1.8</version>
-                </provides>
-                <configuration>
-                    <jdkHome>${env.JAVA_HOME_8_X64}</jdkHome>
-                </configuration>
-            </toolchain>
-        </toolchains>
-        EOF
-        echo "Maven Toolchains configured"
-
-#     - name: Build dremio base
-#       #working-directory: dair-base
-#       run: mvn clean install -DskipTests=true
-
-    - name: list dir
-      run: ls -alrt ${HOME}/.m2/ && printenv | grep JAVA_HOME
+    - name: Build dremio base
+      run: mvn clean install -DskipTests=true
       
-#     - name: Configure AWS credentials
-#       uses: aws-actions/configure-aws-credentials@v1
-#       with:
-#         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#         aws-region: ${{ secrets.AWS_REGION }}
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
 
-#     - name: Login to Amazon ECR
-#       id: login-ecr
-#       uses: aws-actions/amazon-ecr-login@v1
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
 
-#     - name: Build, tag, and push image to Amazon ECR
-#       id: build-image
-#       env:
-#         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-#         IMAGE_TAG: ${{ github.sha }}
-#       run: |
-#         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./distribution/docker
-#         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-#         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./distribution/docker
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
