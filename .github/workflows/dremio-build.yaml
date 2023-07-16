@@ -46,6 +46,7 @@ jobs:
       run: |
         ls -alrt ${HOME}
         ls -alrt ~/.m2/
+        cat ~/.m2/toolchains.xml
 
     - name: Configure Maven Toolchains
       run: |
