@@ -240,7 +240,7 @@
                 to implement a Java agent, which _is_ allowed to re-define classes.
                 -->
               <jdkToolchain>
-                <version>1.8</version>
+                <version>8</version>
               </jdkToolchain>
             </configuration>
           </plugin>
