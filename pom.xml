@@ -1058,6 +1058,7 @@ limitations under the License.
           <excludes>
             <!-- default excludes (minus some items) from https://github.com/mycila/license-maven-plugin/blob/61f65ac65bfc38246a15fb84083796c5e3afb053/license-maven-plugin/src/main/java/com/mycila/maven/plugin/license/Default.java -->
             <exclude>**/*~</exclude>
+            <exclude>**/Dockerfile</exclude>
             <exclude>**/#*#</exclude>
             <exclude>**/.#*</exclude>
             <exclude>**/%*%</exclude>
